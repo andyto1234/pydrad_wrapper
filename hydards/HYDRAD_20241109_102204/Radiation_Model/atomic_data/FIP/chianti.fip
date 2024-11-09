@@ -1,0 +1,38 @@
+1	13.60
+2	24.59
+3	5.39
+4	9.32
+5	8.30
+6	11.26
+7	14.53
+8	13.61
+9	17.42
+10	21.56
+11	5.14
+12	7.65
+13	5.99
+14	8.15
+15	10.49
+16	10.36
+17	12.97
+18	15.76
+19	4.34
+20	6.11
+21	6.56
+22	6.82
+23	6.74
+24	6.77
+25	7.43
+26	7.90
+27	7.86
+28	7.64
+29	7.73
+30	9.39
+-1
+%filename: chianti.fip
+%FIP: Values from CHIANTI database, v8.0.7
+%comment: These are the first ionization potentials (FIP) values from CHIANTI via the fiasco package
+%
+% Jeffrey Reep, August 2024
+-1
+
