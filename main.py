@@ -9,10 +9,8 @@ from pydrad.configure.data import get_defaults
 from pydrad.configure.util import get_clean_hydrad, run_shell_command
 from pydrad.parse import Strand
 
-tmpdir = pathlib.Path('hydrads/')  # Change to wherever you want to save your clean HYDRAD copy
-hydrad_clean = tmpdir / f'HYDRAD_{datetime.now().strftime("%Y%m%d_%H%M%S")}'
-
-get_clean_hydrad(hydrad_clean, base_path='hydrads/HYDRAD_ponderomotive')
+import platform
+import os
 
 # config = get_defaults()
 config = {
@@ -177,6 +175,17 @@ config['grid']['initial_refinement_level'] = 12 # 12 for active region loop
 config['grid']['maximum_refinement_level'] = 12
 
 c = Configure(config)
+
+
+if platform.system() == 'Linux':
+    tmpdir = pathlib.Path('/disk/solar16/st3/python/pydrad_wrapper/hydrads')
+else:
+    tmpdir = pathlib.Path('/Users/andysh.to/Script/Python_Script/pydrad_wrapper/hydrads')
+
+hydrad_clean = tmpdir / f'HYDRAD_{datetime.now().strftime("%Y%m%d_%H%M%S")}'
+
+get_clean_hydrad(hydrad_clean, base_path='hydrads/HYDRAD_ponderomotive')
+
 test_dir = tmpdir / 'test-run'
 print(test_dir)
 c.setup_simulation(test_dir, hydrad_clean)
