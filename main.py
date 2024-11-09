@@ -9,10 +9,10 @@ from pydrad.configure.data import get_defaults
 from pydrad.configure.util import get_clean_hydrad, run_shell_command
 from pydrad.parse import Strand
 
-tmpdir = pathlib.Path('/Users/andysh.to/Script/Python_Script/pydrad_wrapper/hydards/')  # Change to wherever you want to save your clean HYDRAD copy
+tmpdir = pathlib.Path('hydrads/')  # Change to wherever you want to save your clean HYDRAD copy
 hydrad_clean = tmpdir / f'HYDRAD_{datetime.now().strftime("%Y%m%d_%H%M%S")}'
 
-get_clean_hydrad(hydrad_clean, base_path='/Users/andysh.to/Script/Python_Script/pydrad_wrapper/hydards/HYDRAD_ponderomotive')
+get_clean_hydrad(hydrad_clean, base_path='hydrads/HYDRAD_ponderomotive')
 
 config = get_defaults()
 config['general']['total_time'] = 1000 * u.s
