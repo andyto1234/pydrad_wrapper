@@ -174,7 +174,6 @@ config['initial_conditions']= {
 config['grid']['initial_refinement_level'] = 12 # 12 for active region loop
 config['grid']['maximum_refinement_level'] = 12
 
-c = Configure(config)
 
 
 if platform.system() == 'Linux':
@@ -186,6 +185,7 @@ hydrad_clean = tmpdir / f'HYDRAD_{datetime.now().strftime("%Y%m%d_%H%M%S")}'
 
 get_clean_hydrad(hydrad_clean, base_path='hydrads/HYDRAD_ponderomotive')
 
+c = Configure(config)
 test_dir = tmpdir / 'test-run'
 print(test_dir)
 c.setup_simulation(test_dir, hydrad_clean)
