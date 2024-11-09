@@ -83,7 +83,8 @@ config['grid']['initial_refinement_level'] = 12 # 12 for active region loop
 config['grid']['maximum_refinement_level'] = 12
 
 c = Configure(config)
-c.setup_simulation(tmpdir / 'test-run', hydrad_clean)
+test_dir = tmpdir / 'test-run'
+c.setup_simulation(test_dir, hydrad_clean)
 
 asdf_config = tmpdir / 'test_config.asdf'
 c.save_config(asdf_config)
