@@ -80,6 +80,9 @@ config['initial_conditions']= {
 }
 config['grid']['initial_refinement_level'] = 12 # 12 for active region loop
 config['grid']['maximum_refinement_level'] = 12
+config['general']['use_openmp'] = True
+config['general']['grid_cells_per_thread'] = 30
+
 
 c = Configure(config)
 hydrad_results = tmpdir / f'steady-run-{datetime.now().strftime("%Y%m%d_%H%M%S")}'
