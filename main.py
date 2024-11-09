@@ -46,6 +46,8 @@ config['radiation']=  {
         'ranges_dataset': 'ranges',
         'rates_dataset': 'chianti_v10',
         'use_power_law_radiative_losses': False,
+        'minimum_density_limit': 4.2486e9*u.cm**(-3),  # Set the minimum density limit here
+
     }
 
 config['solver'] = {
