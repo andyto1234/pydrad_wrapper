@@ -84,6 +84,7 @@ config['grid']['maximum_refinement_level'] = 12
 
 c = Configure(config)
 test_dir = tmpdir / 'test-run'
+print(test_dir)
 c.setup_simulation(test_dir, hydrad_clean)
 
 asdf_config = tmpdir / 'test_config.asdf'
